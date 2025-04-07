@@ -132,7 +132,7 @@ def plot_scatter_visualization(metadata_true, metadata_pred, uniques, dir):
         )
         for cat in uniques
     ]
-    ncol = len(uniques) // 4  # Number of columns in the legend
+    ncol = max(1, len(uniques) // 4)  # Number of columns in the legend
     fig.legend(
         handles=legend_elements,
         loc="upper center",
